@@ -3,12 +3,9 @@ package me.km127pl.minerscompanion.events;
 import me.km127pl.minerscompanion.items.HammerItem;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.network.chat.Component;
-import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -33,13 +30,8 @@ public class HammerMineEvent {
         this.shouldDrop = !event.getPlayer().isCreative();
 
         if (inHandStack.is(HammerItem.HAMMER_TAG)) {
-            event.getPlayer().sendSystemMessage(Component.literal("X: " + event.getPlayer().getLookAngle().x));
-            event.getPlayer().sendSystemMessage(Component.literal("Y: " + event.getPlayer().getLookAngle().y));
-            event.getPlayer().sendSystemMessage(Component.literal("Z: " + event.getPlayer().getLookAngle().z));
-            event.getPlayer().sendSystemMessage(Component.literal("D: " + direction));
 
-            // check if player is looking down or up
-            if (this.player.getLookAngle().y > 0.70 || this.player.getLookAngle().y < -0.70) { // player is looking up
+            if (this.player.getLookAngle().y > 0.70 || this.player.getLookAngle().y < -0.70) { // player is looking up/down
                 destroyBlock(pos.south());
                 destroyBlock(pos.south().west());
                 destroyBlock(pos.south().east());
@@ -48,7 +40,7 @@ public class HammerMineEvent {
                 destroyBlock(pos.north().west());
                 destroyBlock(pos.east());
                 destroyBlock(pos.west());
-            } else if (direction == Direction.EAST || direction == Direction.WEST) {
+            } else if (direction == Direction.EAST || direction == Direction.WEST) { // player is looking straight east/west
                 destroyBlock(pos.above());
                 destroyBlock(pos.below());
 
@@ -59,7 +51,7 @@ public class HammerMineEvent {
                 destroyBlock(pos.south());
                 destroyBlock(pos.south().above());
                 destroyBlock(pos.south().below());
-            } else if (direction == Direction.SOUTH || direction == Direction.NORTH) {
+            } else if (direction == Direction.SOUTH || direction == Direction.NORTH) { // player is looking straight south/north
                 destroyBlock(pos.above());
                 destroyBlock(pos.below());
 
@@ -77,9 +69,6 @@ public class HammerMineEvent {
                 int damage = inHandStack.getDamageValue();
                 if (damage - 8 > inHandStack.getMaxDamage()) { // item should be destroyed
                     player.getInventory().clearOrCountMatchingItems((i) -> i.equals(inHandStack), 1, player.getInventory());
-                    event.getPlayer().sendSystemMessage(Component.literal("Hammer broken! " + this.player.getName()));
-                    event.getPlayer().sendSystemMessage(Component.literal("DMG " + damage));
-                    event.getPlayer().sendSystemMessage(Component.literal("DMG MAX " + inHandStack.getMaxDamage()));
                 }
                 inHandStack.setDamageValue(damage + 8);
             }
@@ -87,6 +76,7 @@ public class HammerMineEvent {
 
     }
 
+    //TODO:Destroy the block using the hammer, so fortune enchantments work
     private void destroyBlock(BlockPos blockPos) {
         // make the hammer only break blocks if its allowed to (for example, so it doesn't break bedrock)
         if (this.item.isCorrectToolForDrops(this.level.getBlockState(blockPos))) {
