@@ -6,7 +6,9 @@ import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -16,6 +18,7 @@ public class HammerMineEvent {
     private Level level;
     private Player player;
     private boolean shouldDrop;
+    private Item item;
 
     @SubscribeEvent
     public void onBlockBreak(BlockEvent.BreakEvent event) {
@@ -24,6 +27,7 @@ public class HammerMineEvent {
         ItemStack inHandStack = event.getPlayer().getItemInHand(event.getPlayer().getUsedItemHand());
         Direction direction = event.getPlayer().getDirection();
         BlockPos pos = event.getPos();
+        this.item = inHandStack.getItem();
         this.player = event.getPlayer();
         this.level = event.getPlayer().getLevel();
         this.shouldDrop = !event.getPlayer().isCreative();
@@ -45,8 +49,6 @@ public class HammerMineEvent {
                 destroyBlock(pos.south());
                 destroyBlock(pos.south().above());
                 destroyBlock(pos.south().below());
-
-                inHandStack.setDamageValue(inHandStack.getDamageValue() + 8);
             }
 
             if (direction == Direction.SOUTH || direction == Direction.NORTH) { // player is not mining Up or Down
@@ -71,14 +73,17 @@ public class HammerMineEvent {
                     event.getPlayer().sendSystemMessage(Component.literal("DMG " + damage));
                     event.getPlayer().sendSystemMessage(Component.literal("DMG MAX " + inHandStack.getMaxDamage()));
                 }
-                inHandStack.setDamageValue(damage + 7);
+                inHandStack.setDamageValue(damage + 8);
             }
         }
 
     }
 
     private void destroyBlock(BlockPos blockPos) {
-        this.level.destroyBlock(blockPos, this.shouldDrop, this.player);
+        // make the hammer only break blocks if its allowed to (for example, so it doesn't break bedrock)
+        if (this.item.isCorrectToolForDrops(this.level.getBlockState(blockPos))) {
+            this.level.destroyBlock(blockPos, this.shouldDrop, this.player);
+        }
     }
 
 }
