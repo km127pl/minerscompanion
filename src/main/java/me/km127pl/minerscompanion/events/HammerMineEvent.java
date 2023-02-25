@@ -38,7 +38,17 @@ public class HammerMineEvent {
             event.getPlayer().sendSystemMessage(Component.literal("Z: " + event.getPlayer().getLookAngle().z));
             event.getPlayer().sendSystemMessage(Component.literal("D: " + direction));
 
-            if (direction == Direction.EAST || direction == Direction.WEST) { // player is not mining Up or Down
+            // check if player is looking down or up
+            if (this.player.getLookAngle().y > 0.70 || this.player.getLookAngle().y < -0.70) { // player is looking up
+                destroyBlock(pos.south());
+                destroyBlock(pos.south().west());
+                destroyBlock(pos.south().east());
+                destroyBlock(pos.north());
+                destroyBlock(pos.north().east());
+                destroyBlock(pos.north().west());
+                destroyBlock(pos.east());
+                destroyBlock(pos.west());
+            } else if (direction == Direction.EAST || direction == Direction.WEST) {
                 destroyBlock(pos.above());
                 destroyBlock(pos.below());
 
@@ -49,9 +59,7 @@ public class HammerMineEvent {
                 destroyBlock(pos.south());
                 destroyBlock(pos.south().above());
                 destroyBlock(pos.south().below());
-            }
-
-            if (direction == Direction.SOUTH || direction == Direction.NORTH) { // player is not mining Up or Down
+            } else if (direction == Direction.SOUTH || direction == Direction.NORTH) {
                 destroyBlock(pos.above());
                 destroyBlock(pos.below());
 
