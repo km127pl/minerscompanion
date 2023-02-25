@@ -1,0 +1,21 @@
+
+modLoader="javafml" #mandatory
+loaderVersion="0.1" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+license="GNU GPL v3"
+
+[[mods]]
+modId="minerscompanion"
+version="${file.jarVersion}"
+displayName="Miner's Companion"
+logoFile="examplemod.png"
+credits="KM127PL"
+
+description='''
+Miner's Companion is the ultimate mod for Minecraft miners.
+With a range of utilities designed to make mining easier, faster, and more efficient,
+this mod is your trusted companion in the depths of the earth.
+
+Automatic torch placement ensures that you always have light in the darkest tunnels,
+while mining hammers make quick work of even the toughest blocks. With Miner's Companion by your side,
+you can explore the deepest caves and mine the richest ores with ease.
+'''
