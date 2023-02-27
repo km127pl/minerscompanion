@@ -10,7 +10,12 @@ import net.minecraftforge.registries.RegistryObject;
 import java.util.ArrayList;
 
 public class ItemInit {
+    // TODO:Move the hammers to their own respective classes
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MinersCompanion.MODID);
+
+    public static final RegistryObject<HammerItem> NETHERITE_HAMMER = ITEMS.register("netherite_hammer", () ->
+            new HammerItem(Tiers.NETHERITE, new Item.Properties().rarity(Rarity.RARE))
+    );
 
     public static final RegistryObject<HammerItem> DIAMOND_HAMMER = ITEMS.register("diamond_hammer", () ->
             new HammerItem(Tiers.DIAMOND, new Item.Properties().rarity(Rarity.UNCOMMON))

@@ -19,8 +19,6 @@ public class HammerMineEvent {
 
     @SubscribeEvent
     public void onBlockBreak(BlockEvent.BreakEvent event) {
-//        Block block = event.getState().getBlock();
-//        Item inHand = event.getPlayer().getItemInHand(event.getPlayer().getUsedItemHand()).getItem();
         ItemStack inHandStack = event.getPlayer().getItemInHand(event.getPlayer().getUsedItemHand());
         Direction direction = event.getPlayer().getDirection();
         BlockPos pos = event.getPos();
@@ -31,6 +29,7 @@ public class HammerMineEvent {
 
         if (inHandStack.is(HammerItem.HAMMER_TAG)) {
 
+            //TODO: This probably can be done much better
             if (this.player.getLookAngle().y > 0.70 || this.player.getLookAngle().y < -0.70) { // player is looking up/down
                 destroyBlock(pos.south());
                 destroyBlock(pos.south().west());
@@ -78,7 +77,7 @@ public class HammerMineEvent {
 
     //TODO:Destroy the block using the hammer, so fortune enchantments work
     private void destroyBlock(BlockPos blockPos) {
-        // make the hammer only break blocks if its allowed to (for example, so it doesn't break bedrock)
+        // make the hammer only break blocks if it's allowed to (for example, so it doesn't break bedrock)
         if (this.item.isCorrectToolForDrops(this.level.getBlockState(blockPos))) {
             this.level.destroyBlock(blockPos, this.shouldDrop, this.player);
         }
