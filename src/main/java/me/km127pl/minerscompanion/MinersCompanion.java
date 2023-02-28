@@ -2,7 +2,7 @@ package me.km127pl.minerscompanion;
 
 import me.km127pl.minerscompanion.events.HammerMineEvent;
 import me.km127pl.minerscompanion.init.ItemInit;
-import me.km127pl.minerscompanion.items.MCTab;
+import me.km127pl.minerscompanion.creative.MinersCompanionTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CreativeModeTabEvent;
@@ -25,7 +25,7 @@ public class MinersCompanion {
     }
 
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
-        if (event.getTab() == MCTab.MC_TAB || event.getTab() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+        if (event.getTab() == MinersCompanionTab.MC_TAB || event.getTab() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(ItemInit.NETHERITE_HAMMER);
             event.accept(ItemInit.DIAMOND_HAMMER);
             event.accept(ItemInit.GOLD_HAMMER);

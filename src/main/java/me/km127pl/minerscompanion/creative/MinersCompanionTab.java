@@ -1,4 +1,4 @@
-package me.km127pl.minerscompanion.items;
+package me.km127pl.minerscompanion.creative;
 
 import me.km127pl.minerscompanion.MinersCompanion;
 import me.km127pl.minerscompanion.init.ItemInit;
@@ -11,7 +11,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = MinersCompanion.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class MCTab {
+public class MinersCompanionTab {
      public static CreativeModeTab MC_TAB;
 
      @SubscribeEvent

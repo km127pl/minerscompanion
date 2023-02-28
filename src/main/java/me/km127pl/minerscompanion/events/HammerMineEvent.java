@@ -7,6 +7,8 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
@@ -16,16 +18,19 @@ public class HammerMineEvent {
     private Player player;
     private boolean shouldDrop;
     private Item item;
+    private ItemStack itemStack;
 
     @SubscribeEvent
     public void onBlockBreak(BlockEvent.BreakEvent event) {
-        ItemStack inHandStack = event.getPlayer().getItemInHand(event.getPlayer().getUsedItemHand());
-        Direction direction = event.getPlayer().getDirection();
-        BlockPos pos = event.getPos();
-        this.item = inHandStack.getItem();
         this.player = event.getPlayer();
-        this.level = event.getPlayer().getLevel();
-        this.shouldDrop = !event.getPlayer().isCreative();
+        ItemStack inHandStack = this.player.getItemInHand(this.player.getUsedItemHand());
+        Direction direction =this.player.getDirection();
+        BlockPos pos = event.getPos();
+
+        this.item = inHandStack.getItem();
+        this.level = this.player.getLevel();
+        this.shouldDrop = !this.player.isCreative();
+        this.itemStack = inHandStack;
 
         if (inHandStack.is(HammerItem.HAMMER_TAG)) {
 
@@ -75,12 +80,16 @@ public class HammerMineEvent {
 
     }
 
-    //TODO:Destroy the block using the hammer, so fortune enchantments work
-    private void destroyBlock(BlockPos blockPos) {
+    //TODO:Destroy the block using the hammer itself, so fortune enchantments work
+    //TODO:This should be replaced by a function in the hammer itself (possibly overriding an onBreak method of sorts)
+    private boolean destroyBlock(BlockPos blockPos) {
         // make the hammer only break blocks if it's allowed to (for example, so it doesn't break bedrock)
         if (this.item.isCorrectToolForDrops(this.level.getBlockState(blockPos))) {
             this.level.destroyBlock(blockPos, this.shouldDrop, this.player);
+            return true;
+
         }
+        return false;
     }
 
 }
