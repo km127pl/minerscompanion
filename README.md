@@ -4,9 +4,9 @@ Miner's Companion is a Minecraft Forge mod that provides a range of utilities to
 
 ## Features
 
-- Automatic torch placement ensures that you always have light in the darkest tunnels.
+- Automatic torch placement ensures that you always have light in the darkest tunnels. *TBD*
 - Mining hammers make quick work of even the toughest blocks.
-- Better storage options, such as backpacks and better chests.
+- Better storage options, such as backpacks and better chests. *TBD*
 
 ## Installation
 
