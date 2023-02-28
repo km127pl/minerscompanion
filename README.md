@@ -12,6 +12,8 @@ Miner's Companion is a Minecraft Forge mod that provides a range of utilities to
 
 To use Miner's Companion, you must have Minecraft Forge installed. Once you have Forge installed, simply download the mod and place it in your mods folder.
 
+The full installation guide can be found in the [wiki section](https://github.com/km127pl/minerscompanion/wiki).
+
 ## Download
 
 Download Miner's Companion [here, on modrinth](https://modrinth.com/mod/minerscompanion).
