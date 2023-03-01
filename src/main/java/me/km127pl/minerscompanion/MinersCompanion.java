@@ -1,10 +1,8 @@
 package me.km127pl.minerscompanion;
 
-import me.km127pl.minerscompanion.events.HammerMineEvent;
 import me.km127pl.minerscompanion.init.ItemInit;
 import me.km127pl.minerscompanion.creative.MinersCompanionTab;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -20,7 +18,6 @@ public class MinersCompanion {
 
         eventBus.addListener(this::addCreative);
         ItemInit.ITEMS.register(eventBus);
-        MinecraftForge.EVENT_BUS.register(new HammerMineEvent());
 
     }
 
