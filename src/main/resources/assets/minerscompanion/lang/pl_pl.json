@@ -1,0 +1,12 @@
+{
+  "item.minerscompanion.netherite_hammer": "Netherytowy Młot",
+  "item.minerscompanion.diamond_hammer": "Diamentowy Młot",
+  "item.minerscompanion.gold_hammer": "Złoty Młot",
+  "item.minerscompanion.iron_hammer": "Żelazny Młot",
+  "item.minerscompanion.stone_hammer": "Kamienny Młot",
+  "item.minerscompanion.copper_hammer": "Miedziany Młot",
+
+  "creativemodetab.mc_tab": "Miner's Companion",
+
+  "messages.debug": "Wiadomość testowa"
+}
