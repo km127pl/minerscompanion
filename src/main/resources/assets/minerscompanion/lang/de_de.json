@@ -1,5 +1,5 @@
 {
-  "item.minerscompanion.netherite_hammer": "Netherite Hammer",
+  "item.minerscompanion.netherite_hammer": "Netherithammer",
   "item.minerscompanion.diamond_hammer": "Diamanthammer",
   "item.minerscompanion.gold_hammer": "Goldhammer",
   "item.minerscompanion.iron_hammer": "Eisenhammer",
@@ -7,5 +7,5 @@
   "item.minerscompanion.copper_hammer": "Kupferhammer",
 
   "creativemodetab.mc_tab": "Miner's Companion",
-  "messages.debug": "Debugmeldung, bitte ignorieren"
+  "messages.debug": "Debugnachricht, bitte ignorieren"
 }
