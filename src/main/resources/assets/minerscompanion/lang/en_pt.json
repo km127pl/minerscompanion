@@ -1,0 +1,10 @@
+{
+  "item.minerscompanion.netherite_hammer": "Hammer o' Blackbeard's alloy",
+  "item.minerscompanion.diamond_hammer": "Hammer o' Diamond",
+  "item.minerscompanion.gold_hammer": "Hammer o' Gold",
+  "item.minerscompanion.iron_hammer": "Hammer o' Steel",
+  "item.minerscompanion.stone_hammer": "Hammer o' Rock",
+  "item.minerscompanion.copper_hammer": "Hammer o' Copper",
+  "creativemodetab.mc_tab": "Miner's Companion",
+  "messages.debug": "Debug message"
+}
