@@ -26,6 +26,6 @@ If you would like to contribute to Miner's Companion, please fork the repository
 
 If you notice that the mod is not in the language that you speak, hop onto our [crowdin page](https://crowdin.com/project/miners-companion) to help localize it!
 
-## License
+## License  
 
 This project is licensed under the GNU GPLv3 license - see the [LICENSE](LICENSE) file for details.
