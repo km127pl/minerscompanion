@@ -1,8 +1,8 @@
 package me.km127pl.minerscompanion;
 
+import me.km127pl.minerscompanion.creative.MinersCompanionTab;
 import me.km127pl.minerscompanion.events.HammerMineEvent;
 import me.km127pl.minerscompanion.init.ItemInit;
-import me.km127pl.minerscompanion.creative.MinersCompanionTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CreativeModeTabEvent;

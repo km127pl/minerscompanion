@@ -12,16 +12,16 @@ import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = MinersCompanion.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class MinersCompanionTab {
-     public static CreativeModeTab MC_TAB;
+    public static CreativeModeTab MC_TAB;
 
-     @SubscribeEvent
-     public static void registerTabs(CreativeModeTabEvent.Register event) {
-         MC_TAB = event.registerCreativeModeTab(new ResourceLocation(
-                 MinersCompanion.MODID,
-                 "mc_tab"
-         ),
-                 builder -> builder.icon(
-                         () -> new ItemStack(ItemInit.DIAMOND_HAMMER.get())
-                 ).title(Component.translatable("creativemodetab.mc_tab")));
-     }
+    @SubscribeEvent
+    public static void registerTabs(CreativeModeTabEvent.Register event) {
+        MC_TAB = event.registerCreativeModeTab(new ResourceLocation(
+                        MinersCompanion.MODID,
+                        "mc_tab"
+                ),
+                builder -> builder.icon(
+                        () -> new ItemStack(ItemInit.DIAMOND_HAMMER.get())
+                ).title(Component.translatable("creativemodetab.mc_tab")));
+    }
 }

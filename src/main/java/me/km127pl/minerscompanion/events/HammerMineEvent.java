@@ -7,8 +7,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
@@ -24,7 +22,7 @@ public class HammerMineEvent {
     public void onBlockBreak(BlockEvent.BreakEvent event) {
         this.player = event.getPlayer();
         ItemStack inHandStack = this.player.getItemInHand(this.player.getUsedItemHand());
-        Direction direction =this.player.getDirection();
+        Direction direction = this.player.getDirection();
         BlockPos pos = event.getPos();
 
         this.item = inHandStack.getItem();

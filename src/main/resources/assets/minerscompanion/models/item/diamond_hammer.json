@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-	"layer0": "minerscompanion:item/tool_hammer_diamond"
+    "layer0": "minerscompanion:item/tool_hammer_diamond"
   }
 }

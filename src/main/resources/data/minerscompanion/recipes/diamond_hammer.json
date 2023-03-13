@@ -1,22 +1,22 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-	" MT",
-	" SM",
-	"S  "
+    " MT",
+    " SM",
+    "S  "
   ],
   "key": {
-	"S": {
-	  "item": "minecraft:stick"
-	},
-	"M": {
-	  "item": "minecraft:diamond"
-	},
-	"T": {
-	  "item": "minecraft:string"
-	}
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "M": {
+      "item": "minecraft:diamond"
+    },
+    "T": {
+      "item": "minecraft:string"
+    }
   },
   "result": {
-	"item": "minerscompanion:diamond_hammer"
+    "item": "minerscompanion:diamond_hammer"
   }
 }

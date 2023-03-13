@@ -1,11 +1,11 @@
 {
   "replace": false,
   "values": [
-	"minerscompanion:diamond_hammer",
-	"minerscompanion:gold_hammer",
-	"minerscompanion:iron_hammer",
-	"minerscompanion:copper_hammer",
-	"minerscompanion:stone_hammer",
-	"minerscompanion:netherite_hammer"
+    "minerscompanion:diamond_hammer",
+    "minerscompanion:gold_hammer",
+    "minerscompanion:iron_hammer",
+    "minerscompanion:copper_hammer",
+    "minerscompanion:stone_hammer",
+    "minerscompanion:netherite_hammer"
   ]
 }

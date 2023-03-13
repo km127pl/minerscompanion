@@ -1,15 +1,15 @@
-modLoader="javafml" #mandatory
-loaderVersion="[44,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
-license="GNU GPL v3"
+modLoader = "javafml" #mandatory
+loaderVersion = "[44,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+license = "GNU GPL v3"
 
 [[mods]]
-modId="minerscompanion"
-version="0.3-alpha"
-displayName="Miner's Companion"
-logoFile="icon.png"
-credits="KM127PL"
+modId = "minerscompanion"
+version = "0.3-alpha"
+displayName = "Miner's Companion"
+logoFile = "icon.png"
+credits = "KM127PL"
 
-description='''
+description = '''
 Miner's Companion is the ultimate mod for Minecraft miners.
 With a range of utilities designed to make mining easier, faster, and more efficient,
 this mod is your trusted companion in the depths of the earth.
@@ -20,15 +20,15 @@ you can explore the deepest caves and mine the richest ores with ease.
 '''
 
 [[dependencies.minerscompanion]]
-    modId="forge"
-    mandatory=true
-    versionRange="[44,)"
-    ordering="NONE"
-    side="BOTH"
+modId = "forge"
+mandatory = true
+versionRange = "[44,)"
+ordering = "NONE"
+side = "BOTH"
 
 [[dependencies.minerscompanion]]
-    modId="minecraft"
-    mandatory=true
-    versionRange="[1.19.3,1.20)"
-    ordering="NONE"
-    side="BOTH"
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.19.3,1.20)"
+ordering = "NONE"
+side = "BOTH"
