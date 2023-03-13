@@ -30,6 +30,7 @@ public class MinersCompanion {
             event.accept(ItemInit.DIAMOND_HAMMER);
             event.accept(ItemInit.GOLD_HAMMER);
             event.accept(ItemInit.IRON_HAMMER);
+            event.accept(ItemInit.COPPER_HAMMER);
             event.accept(ItemInit.STONE_HAMMER);
         }
     }
