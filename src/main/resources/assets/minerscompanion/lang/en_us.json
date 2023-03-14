@@ -10,6 +10,8 @@
   "item.minerscompanion.superalloy_ingot": "Superalloy Ingot",
   "item.minerscompanion.superalloy_dust": "Superalloy Dust",
 
+  "block.minerscompanion.superalloy_block": "Superalloy Block",
+
   "creativemodetab.mc_tab": "Miner's Companion",
   "messages.debug": "Debug message"
 }
