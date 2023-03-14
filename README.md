@@ -47,3 +47,4 @@ our [crowdin page](https://crowdin.com/project/miners-companion) to help localiz
 ## License
 
 This project is licensed under the GNU GPLv3 license - see the [LICENSE](LICENSE) file for details.
+The textures used in this project are licensed under the Creative Commons Attribution 4.0 International - see their [LICENSE](https://github.com/malcolmriley/unused-textures/blob/master/LICENSE) file for more details.
