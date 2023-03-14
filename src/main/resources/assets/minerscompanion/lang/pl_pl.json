@@ -1,18 +1,14 @@
 {
-
-  "item.minerscompanion.superalloy_hammer": "Superstopowy Młot",
+  "item.minerscompanion.superalloy_hammer": "Nadstopowy Młot",
   "item.minerscompanion.netherite_hammer": "Netherytowy Młot",
   "item.minerscompanion.diamond_hammer": "Diamentowy Młot",
   "item.minerscompanion.gold_hammer": "Złoty Młot",
   "item.minerscompanion.iron_hammer": "Żelazny Młot",
   "item.minerscompanion.stone_hammer": "Kamienny Młot",
   "item.minerscompanion.copper_hammer": "Miedziany Młot",
-
-  "item.minerscompanion.superalloy_ingot": "Superstopowa Sztabka",
-  "item.minerscompanion.superalloy_dust": "Superstopowy Proch",
-
-  "block.minerscompanion.superalloy_block": "Blok Superstopu",
-
+  "item.minerscompanion.superalloy_ingot": "Sztabka nadstopu",
+  "item.minerscompanion.superalloy_dust": "Pył nadstopowy",
+  "block.minerscompanion.superalloy_block": "Blok nadstopu",
   "creativemodetab.mc_tab": "Miner's Companion",
   "messages.debug": "Wiadomość testowa"
 }
