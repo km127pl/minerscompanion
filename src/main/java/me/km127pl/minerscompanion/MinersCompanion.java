@@ -31,6 +31,7 @@ public class MinersCompanion {
 
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
         if (event.getTab() == MinersCompanionTab.MC_TAB || event.getTab() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+            event.accept(ItemInit.SUPERALLOY_HAMMER);
             event.accept(ItemInit.NETHERITE_HAMMER);
             event.accept(ItemInit.DIAMOND_HAMMER);
             event.accept(ItemInit.GOLD_HAMMER);
