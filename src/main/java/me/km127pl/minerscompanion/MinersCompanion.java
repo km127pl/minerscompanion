@@ -1,6 +1,7 @@
 package me.km127pl.minerscompanion;
 
 import me.km127pl.minerscompanion.creative.MinersCompanionTab;
+import me.km127pl.minerscompanion.init.BlockInit;
 import me.km127pl.minerscompanion.init.ItemInit;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
@@ -16,10 +17,15 @@ public class MinersCompanion {
     public static final String MODID = "minerscompanion";
 
     public MinersCompanion() {
-        // register items
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        // register items in the custom tab
         eventBus.addListener(this::addCreative);
+
+        // register blocks
+        BlockInit.BLOCKS.register(eventBus);
+
+        // register items
         ItemInit.ITEMS.register(eventBus);
     }
 
@@ -35,6 +41,9 @@ public class MinersCompanion {
         if (event.getTab() == MinersCompanionTab.MC_TAB || event.getTab() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ItemInit.SUPERALLOY_INGOT);
             event.accept(ItemInit.SUPERALLOY_DUST);
+        }
+        if (event.getTab() == MinersCompanionTab.MC_TAB || event.getTab() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(BlockInit.SUPERALLOY_BLOCK);
         }
     }
 

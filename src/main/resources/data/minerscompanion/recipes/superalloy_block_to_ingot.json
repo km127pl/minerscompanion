@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "minerscompanion",
+  "ingredients": [
+    {
+      "item": "minerscompanion:superalloy_block"
+    }
+  ],
+  "result": {
+    "item": "minerscompanion:superalloy_ingot",
+    "count": 9
+  }
+}

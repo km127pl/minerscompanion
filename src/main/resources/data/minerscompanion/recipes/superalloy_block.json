@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "minerscompanion",
+  "pattern": [
+    "SSS",
+    "SSS",
+    "SSS"
+  ],
+  "key": {
+    "S": {
+      "item": "minerscompanion:superalloy_ingot"
+    }
+  },
+  "result": {
+    "item": "minerscompanion:superalloy_block"
+  }
+}

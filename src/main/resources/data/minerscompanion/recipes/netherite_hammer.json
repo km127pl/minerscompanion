@@ -1,5 +1,6 @@
 {
   "type": "minecraft:smithing",
+  "group": "minerscompanion",
   "base": {
     "item": "minerscompanion:diamond_hammer"
   },

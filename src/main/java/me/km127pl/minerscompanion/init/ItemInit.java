@@ -13,6 +13,7 @@ public class ItemInit {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MinersCompanion.MODID);
 
     // HAMMERS
+    public static final RegistryObject<SuperalloyHammer> SUPERALLOY_HAMMER = ITEMS.register("superalloy_hammer", SuperalloyHammer::new);
     public static final RegistryObject<NetheriteHammer> NETHERITE_HAMMER = ITEMS.register("netherite_hammer", NetheriteHammer::new);
 
     public static final RegistryObject<DiamondHammer> DIAMOND_HAMMER = ITEMS.register("diamond_hammer", DiamondHammer::new);
