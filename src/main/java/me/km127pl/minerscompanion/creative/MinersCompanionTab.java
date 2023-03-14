@@ -21,7 +21,7 @@ public class MinersCompanionTab {
                         "mc_tab"
                 ),
                 builder -> builder.icon(
-                        () -> new ItemStack(ItemInit.DIAMOND_HAMMER.get())
+                        () -> new ItemStack(ItemInit.NETHERITE_HAMMER.get())
                 ).title(Component.translatable("creativemodetab.mc_tab")));
     }
 }
