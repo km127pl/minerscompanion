@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:blasting",
+  "group": "minerscompanion",
+  "ingredient": {
+    "item": "minerscompanion:superalloy_dust"
+  },
+  "result": "minerscompanion:superalloy_ingot",
+  "experience": 0.5,
+  "cookingtime": 100
+}

@@ -1,6 +1,7 @@
-package me.km127pl.minerscompanion.items;
+package me.km127pl.minerscompanion.items.hammers;
 
 import me.km127pl.minerscompanion.MinersCompanion;
+import me.km127pl.minerscompanion.items.hammers.NetheriteHammer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
@@ -48,8 +49,6 @@ public class BaseHammer extends DiggerItem {
     @Override
     public boolean mineBlock(ItemStack itemStack, Level level, BlockState blockState, BlockPos blockPos, LivingEntity entity) {
         if (!level.isClientSide && blockState.getDestroySpeed(level, blockPos) != 0.0F) {
-            entity.sendSystemMessage(Component.literal("test"));
-
             this.itemStack = itemStack;
             this.level = level;
             this.blockState = blockState;

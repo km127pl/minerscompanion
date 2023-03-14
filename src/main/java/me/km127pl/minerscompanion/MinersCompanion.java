@@ -3,10 +3,13 @@ package me.km127pl.minerscompanion;
 import me.km127pl.minerscompanion.creative.MinersCompanionTab;
 import me.km127pl.minerscompanion.init.ItemInit;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.Item;
 import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
 
 @Mod(MinersCompanion.MODID)
 public class MinersCompanion {
@@ -28,6 +31,10 @@ public class MinersCompanion {
             event.accept(ItemInit.IRON_HAMMER);
             event.accept(ItemInit.COPPER_HAMMER);
             event.accept(ItemInit.STONE_HAMMER);
+        }
+        if (event.getTab() == MinersCompanionTab.MC_TAB || event.getTab() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ItemInit.SUPERALLOY_INGOT);
+            event.accept(ItemInit.SUPERALLOY_DUST);
         }
     }
 

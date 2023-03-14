@@ -2,16 +2,17 @@ package me.km127pl.minerscompanion.init;
 
 import me.km127pl.minerscompanion.MinersCompanion;
 import me.km127pl.minerscompanion.items.hammers.*;
+import me.km127pl.minerscompanion.items.materials.SuperalloyDust;
+import me.km127pl.minerscompanion.items.materials.SuperalloyIngot;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Rarity;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ItemInit {
-    // TODO:Move the hammers to their own respective classes
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MinersCompanion.MODID);
 
+    // HAMMERS
     public static final RegistryObject<NetheriteHammer> NETHERITE_HAMMER = ITEMS.register("netherite_hammer", NetheriteHammer::new);
 
     public static final RegistryObject<DiamondHammer> DIAMOND_HAMMER = ITEMS.register("diamond_hammer", DiamondHammer::new);
@@ -27,4 +28,9 @@ public class ItemInit {
 
     public static final RegistryObject<StoneHammer> STONE_HAMMER = ITEMS.register("stone_hammer", StoneHammer::new
     );
+
+    // MATERIALS
+
+    public static final RegistryObject<Item> SUPERALLOY_INGOT = ITEMS.register("superalloy_ingot", SuperalloyIngot::new);
+    public static final RegistryObject<Item> SUPERALLOY_DUST = ITEMS.register("superalloy_dust", SuperalloyDust::new);
 }
